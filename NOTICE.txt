@@ -1,0 +1,10 @@
+LaMa: Resolution-robust Large Mask Inpainting with Fourier Convolutions (big-lama model)
+Copyright 2021 Samsung Research. https://github.com/advimman/lama
+
+Licensed under the Apache License, Version 2.0 (see LICENSE-LaMa-Apache-2.0.txt).
+
+Modified by Pibook: the model was converted to TensorFlow Lite and Core ML; the FFT was replaced
+by equivalent DFT matrix multiplications; BatchNorm layers were folded into convolutions;
+transposed convolutions were rewritten as equivalent polyphase convolutions; reflect padding
+is expressed as MIRROR_PAD; convolution weights are stored as 8-bit integers (three small
+layers and the Fourier units stay in 32-bit float).
